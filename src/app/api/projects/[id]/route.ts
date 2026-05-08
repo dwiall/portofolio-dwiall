@@ -1,0 +1,53 @@
+import { NextResponse } from "next/server";
+import { db } from "@/lib/db";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
+import { revalidatePath } from "next/cache";
+
+export async function PUT(
+  req: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const session = await getServerSession(authOptions);
+    if (!session) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    
+    const resolvedParams = await params;
+    const body = await req.json();
+    const project = await db.project.update({
+      where: { id: resolvedParams.id },
+      data: body,
+    });
+    
+    revalidatePath("/");
+    revalidatePath("/projects");
+    return NextResponse.json(project);
+  } catch (error) {
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
+}
+
+export async function DELETE(
+  req: Request,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const session = await getServerSession(authOptions);
+    if (!session) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    
+    const resolvedParams = await params;
+    await db.project.delete({
+      where: { id: resolvedParams.id },
+    });
+    
+    revalidatePath("/");
+    revalidatePath("/projects");
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  }
+}
