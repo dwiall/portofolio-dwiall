@@ -7,6 +7,7 @@ import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { CertificatesSection } from "@/components/sections/CertificatesSection";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { GithubContribution } from "@/components/github/github-contribution";
 
 export default async function Home() {
   // Fetch all data from database
@@ -30,6 +31,8 @@ export default async function Home() {
       
       <main className="flex-grow pt-16">
         <Hero heroData={heroData || fallbackHero} />
+        
+        <GithubContribution />
         
         {(experiences.length > 0 || education.length > 0) && (
           <ExperienceSection 
