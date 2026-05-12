@@ -2,7 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
@@ -93,19 +93,22 @@ export function Hero({ heroData }: HeroProps) {
                 </Button>
               )}
               <Button size="lg" variant="outline" className="rounded-full px-8 glass border-primary/50 hover:bg-primary/10 transition-all hover:scale-105">
-                <Link href="#contact">Let&apos;s Connect</Link>
+                <Link href="https://www.linkedin.com/in/adam-8107ba307/">Let&apos;s Connect LinkedIn</Link>
               </Button>
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex items-center gap-6 pt-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
+              <Link href="https://github.com/adamdev15" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
                 <FaGithub className="h-6 w-6" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
+              <Link href="https://www.linkedin.com/in/adam-8107ba307/" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
                 <FaLinkedin className="h-6 w-6" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
+              <Link href="mailto:adam.visionary@gmail.com" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
                 <FaEnvelope className="h-6 w-6" />
+              </Link>
+              <Link href="https://wa.me/6285640600585" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
+                <FaWhatsapp className="h-6 w-6" />
               </Link>
             </motion.div>
           </motion.div>
