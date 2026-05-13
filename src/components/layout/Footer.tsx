@@ -19,20 +19,19 @@ export function Footer({ name = "ADAM", image }: FooterProps) {
           <div className="col-span-1 md:col-span-2 space-y-6">
             
             <p className="text-blue-100/70 max-w-sm leading-relaxed text-lg">
-              Professional Web Developer specialized in building exceptional digital experiences. 
-              Let's build something amazing together.
+              Information Systems student at Harkat State University with experience as a Web Developer. By combining skills in design and development, I strive to create digital solutions that are functional, visually appealing, and user-friendly, ensuring a smooth and engaging user experience.
             </p>
             <div className="flex items-center gap-4 pt-2">
-              <Link href="#" className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300">
+              <Link href="https://github.com/adamdev15" className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300">
                 <FaGithub size={20} />
               </Link>
-              <Link href="#" className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300">
+              <Link href="https://www.linkedin.com/in/adam-8107ba307/" className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300">
                 <FaLinkedin size={20} />
               </Link>
-              <Link href="#" className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300">
+              <Link href="https://www.instagram.com/_adam.dev/" className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300">
                 <FaInstagram size={20} />
               </Link>
-              <Link href="#" className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300">
+              <Link href="https://wa.me/6285640600585" className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300">
                 <Mail size={20} />
               </Link>
             </div>

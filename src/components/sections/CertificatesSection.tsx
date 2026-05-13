@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { Award, ExternalLink, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Certificate } from "@prisma/client";
 import Image from "next/image";
 import { SafeImage } from "@/components/ui/safe-image";
 import Link from "next/link";
 import { useRef } from "react";
+import { useState } from "react";
+import { ImageModal } from "@/components/ui/image-modal";
 import { Button } from "@/components/ui/button";
 
 interface CertificatesSectionProps {
@@ -15,6 +17,7 @@ interface CertificatesSectionProps {
 
 export function CertificatesSection({ certificates }: CertificatesSectionProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -26,6 +29,12 @@ export function CertificatesSection({ certificates }: CertificatesSectionProps) 
 
   return (
     <section id="certificates" className="py-24 bg-secondary/30 relative overflow-hidden px-6">
+      <ImageModal 
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        imageSrc={selectedImage?.src || ""}
+        alt={selectedImage?.alt || ""}
+      />
       {/* Background decoration */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-primary/5 blur-[100px] pointer-events-none" />
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-64 h-64 bg-accent/5 blur-[100px] pointer-events-none" />
@@ -80,9 +89,12 @@ export function CertificatesSection({ certificates }: CertificatesSectionProps) 
               transition={{ delay: index * 0.1 }}
               className="min-w-[300px] md:min-w-[450px] snap-center glass p-6 rounded-3xl border border-white/10 flex flex-col sm:flex-row gap-6 hover:border-primary/50 transition-all group shadow-xl"
             >
-              <div className="relative w-full sm:w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-primary/5 flex items-center justify-center">
+              <div 
+                className="relative w-full sm:w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-primary/5 flex items-center justify-center cursor-zoom-in group/img"
+                onClick={() => cert.image && setSelectedImage({ src: cert.image, alt: cert.title })}
+              >
                 {cert.image ? (
-                  <SafeImage src={cert.image} alt={cert.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 128px" />
+                  <SafeImage src={cert.image} alt={cert.title} fill className="object-cover group-hover/img:scale-110 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 128px" />
                 ) : (
                   <Award size={48} className="text-primary/40" />
                 )}
@@ -111,6 +123,20 @@ export function CertificatesSection({ certificates }: CertificatesSectionProps) 
             </motion.div>
           ))}
         </div>
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="flex justify-center mt-12"
+        >
+          <Link href="/certificates">
+            <Button 
+              variant="outline" 
+              className="rounded-full px-8 py-6 border-primary/30 hover:bg-primary/10 transition-all group"
+            >
+              View More Certificates <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
