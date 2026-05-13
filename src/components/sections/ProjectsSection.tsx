@@ -5,6 +5,7 @@ import { ExternalLink, ArrowRight } from "lucide-react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { Project } from "@prisma/client";
 import Image from "next/image";
+import { SafeImage } from "@/components/ui/safe-image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -56,7 +57,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
             >
               <div className="relative h-42 w-full overflow-hidden">
                 {project.image ? (
-                  <Image
+                  <SafeImage
                     src={project.image}
                     alt={project.title}
                     fill

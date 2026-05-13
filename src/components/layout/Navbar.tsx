@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { SafeImage } from "@/components/ui/safe-image";
 
 const navLinks = [
   { name: "Home", href: "#" },
@@ -47,7 +48,7 @@ export function Navbar({ name = "ADAM", image }: NavbarProps) {
         <Link href="/" className="flex items-center gap-3 group">
           {image ? (
             <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-primary group-hover:scale-110 transition-transform">
-              <Image src={image} alt={name} fill className="object-cover" sizes="40px" />
+              <SafeImage src={image} alt={name} fill className="object-cover" sizes="40px" />
             </div>
           ) : (
             <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold group-hover:scale-110 transition-transform">

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Skill } from "@prisma/client";
 import Image from "next/image";
+import { SafeImage } from "@/components/ui/safe-image";
 
 interface SkillsSectionProps {
   skills: Skill[];
@@ -54,7 +55,7 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
                     >
                       {skill.image ? (
                         <div className="relative w-12 h-12 grayscale group-hover:grayscale-0 transition-all duration-300">
-                          <Image src={skill.image} alt={skill.name} fill className="object-contain" />
+                          <SafeImage src={skill.image} alt={skill.name} fill className="object-contain" sizes="48px" />
                         </div>
                       ) : (
                         <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center font-bold text-primary text-xl">

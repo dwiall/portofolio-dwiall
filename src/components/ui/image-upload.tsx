@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import Image from "next/image";
+import { SafeImage } from "./safe-image";
 import { X, Upload, Loader2 } from "lucide-react";
 import { Button } from "./button";
 
@@ -51,7 +52,7 @@ export function ImageUpload({ onChange, onRemove, value }: ImageUploadProps) {
   if (value) {
     return (
       <div className="relative w-full h-[200px] rounded-2xl overflow-hidden border border-white/10 group shadow-lg">
-        <Image fill src={value} alt="Upload" className="object-cover" sizes="(max-width: 768px) 100vw, 400px" />
+        <SafeImage fill src={value} alt="Upload" className="object-cover" sizes="(max-width: 768px) 100vw, 400px" />
         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
           <Button type="button" variant="destructive" size="icon" onClick={onRemove} className="rounded-full">
             <X className="h-4 w-4" />

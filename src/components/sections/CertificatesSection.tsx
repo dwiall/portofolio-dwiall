@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Award, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { Certificate } from "@prisma/client";
 import Image from "next/image";
+import { SafeImage } from "@/components/ui/safe-image";
 import Link from "next/link";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
@@ -81,7 +82,7 @@ export function CertificatesSection({ certificates }: CertificatesSectionProps) 
             >
               <div className="relative w-full sm:w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-primary/5 flex items-center justify-center">
                 {cert.image ? (
-                  <Image src={cert.image} alt={cert.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 128px" />
+                  <SafeImage src={cert.image} alt={cert.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 128px" />
                 ) : (
                   <Award size={48} className="text-primary/40" />
                 )}

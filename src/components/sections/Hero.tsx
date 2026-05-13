@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { SafeImage } from "@/components/ui/safe-image";
 import Typewriter from "typewriter-effect";
 
 
@@ -128,7 +129,7 @@ export function Hero({ heroData }: HeroProps) {
               {/* Image Container */}
               <div className="absolute inset-8 rounded-full overflow-hidden glass border border-white/10 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
                 {heroData.image ? (
-                    <Image 
+                    <SafeImage 
                       src={heroData.image} 
                       alt={heroData.name} 
                       fill 
