@@ -99,7 +99,7 @@ export function Hero({ heroData }: HeroProps) {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex items-center gap-6 pt-4">
-              <Link href="https://github.com/adamdev15" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
+              <Link href="https://github.com/dwiall" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
                 <FaGithub className="h-6 w-6" />
               </Link>
               <Link href="https://www.linkedin.com/in/adam-8107ba307/" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">

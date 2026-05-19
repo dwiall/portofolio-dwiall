@@ -22,7 +22,7 @@ export function Footer({ name = "ADAM", image }: FooterProps) {
               Information Systems student at Harkat State University with experience as a Web Developer. By combining skills in design and development, I strive to create digital solutions that are functional, visually appealing, and user-friendly, ensuring a smooth and engaging user experience.
             </p>
             <div className="flex items-center gap-4 pt-2">
-              <Link href="https://github.com/adamdev15" className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300">
+              <Link href="https://github.com/dwiall" className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300">
                 <FaGithub size={20} />
               </Link>
               <Link href="https://www.linkedin.com/in/adam-8107ba307/" className="p-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300">

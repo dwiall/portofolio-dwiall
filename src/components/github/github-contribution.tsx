@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function GithubContribution() {
-  const username = "adamdev15";
+  const username = "dwiall";
 
   // Minimalist theme for the calendar
   const theme = {

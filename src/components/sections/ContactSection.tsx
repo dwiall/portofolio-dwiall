@@ -80,7 +80,7 @@ export function ContactSection() {
             <div className="pt-6 space-y-4">
               <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Follow Me</p>
               <div className="flex gap-4">
-                <a href="https://github.com/adamdev15" className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                <a href="https://github.com/dwiall" className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                   <FaGithub size={18} />
                 </a>
                 <a href="https://www.linkedin.com/in/adam-8107ba307/" className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary hover:text-white transition-all">
