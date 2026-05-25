@@ -108,7 +108,7 @@ export function Hero({ heroData }: HeroProps) {
               <Link href="mailto:dayulestari577@gmail.com" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
                 <FaEnvelope className="h-6 w-6" />
               </Link>
-              <Link href="https://wa.me/62882006612745" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
+              <Link href="https://wa.me/6285229213855" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
                 <FaWhatsapp className="h-6 w-6" />
               </Link>
             </motion.div>
