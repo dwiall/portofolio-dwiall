@@ -52,7 +52,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm font-bold">Email</p>
-                  <p className="text-muted-foreground">adam.visionary15@gmail.com</p>
+                  <p className="text-muted-foreground">dayulestari577@gmail.com</p>
                 </div>
               </div>
               
@@ -62,7 +62,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm font-bold">Phone</p>
-                  <p className="text-muted-foreground">+62 856 4060 0585</p>
+                  <p className="text-muted-foreground">+62 8820 0661 2745</p>
                 </div>
               </div>
 
@@ -72,7 +72,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm font-bold">Location</p>
-                  <p className="text-muted-foreground">Kab.Tegal, Jawa Tengah, Indonesia</p>
+                  <p className="text-muted-foreground">Kota Tegal, Jawa Tengah, Indonesia</p>
                 </div>
               </div>
             </div>
@@ -83,10 +83,10 @@ export function ContactSection() {
                 <a href="https://github.com/dwiall" className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                   <FaGithub size={18} />
                 </a>
-                <a href="https://www.linkedin.com/in/adam-8107ba307/" className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                <a href="https://www.linkedin.com/in/dwi-ayu-lestari-69799321a/" className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                   <FaLinkedin size={18} />
                 </a>
-                <a href="https://www.instagram.com/_adam.dev/" className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                <a href="https://www.instagram.com/dwiall__/" className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                   <FaInstagram size={18} />
                 </a>
               </div>
