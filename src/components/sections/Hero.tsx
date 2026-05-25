@@ -68,7 +68,7 @@ export function Hero({ heroData }: HeroProps) {
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-primary">
                   <Typewriter
                     options={{
-                      strings: ["Data Analyst and Business Analyst Enthusiast"],
+                      strings: ["Data and Business Analyst Enthusiast"],
                       autoStart: true,
                       loop: true,
                       deleteSpeed: 50,
