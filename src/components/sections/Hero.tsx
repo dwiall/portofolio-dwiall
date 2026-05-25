@@ -102,13 +102,13 @@ export function Hero({ heroData }: HeroProps) {
               <Link href="https://github.com/dwiall" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
                 <FaGithub className="h-6 w-6" />
               </Link>
-              <Link href="https://www.linkedin.com/in/adam-8107ba307/" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
+              <Link href="https://www.linkedin.com/in/dwi-ayu-lestari-69799321a/" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
                 <FaLinkedin className="h-6 w-6" />
               </Link>
-              <Link href="mailto:adam.visionary@gmail.com" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
+              <Link href="mailto:dayulestari577@gmail.com" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
                 <FaEnvelope className="h-6 w-6" />
               </Link>
-              <Link href="https://wa.me/6285640600585" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
+              <Link href="https://wa.me/62882006612745" className="text-muted-foreground hover:text-primary transition-all hover:scale-110">
                 <FaWhatsapp className="h-6 w-6" />
               </Link>
             </motion.div>
